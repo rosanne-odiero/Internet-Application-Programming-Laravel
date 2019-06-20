@@ -4,8 +4,8 @@
 <div class="container">
     <h1 class="mb-5">{{$data['title']}}</h1>
     {{ Form::open(['action'=>'FeesController@store','method'=>'POST','class'=>'col-lg-6 col-offset-4 centered']) }}
-        <div class="row">
-            <div class="col-6">
+        
+            <div class="col">
                 <div class="form-group">
                     {{Form::label('student_id', 'Student Number')}}<br>
                     {{-- {{var_dump($data['studentnumbers'])}}; --}}
@@ -19,22 +19,22 @@
                     {{Form::date('dateofpayment', new \DateTime(), ['class' => 'form-control']) }}
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
+        
+        
+            <div class="col">
                 <div class="form-group">
                     {{Form::label('amount', 'Amount')}}
                     {{Form::text('amount','',['class'=>'form-control','placeholder'=>'Amount'])}}
                 </div>
             </div>
-        </div>
-        <div class="row">
+       
+        
             <div class="col">
                 <div class="form-group">
                     {{Form::submit('Submit',['class'=>'btn btn-primary'])}}
                 </div>
             </div>
-        </div>
+        
     {{ Form::close() }}
 </div>
    
